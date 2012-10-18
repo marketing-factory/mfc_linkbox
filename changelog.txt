@@ -1,0 +1,9 @@
+12-10-17 Yves Becker <yb@marketing-factory.de>
+
+	* hide empty <p> blocks
+	* Set Version to: 1.0.1
+
+12-01-27 Yves Becker <yb@marketing-factory.de>
+
+	* initital release
+	* Set Version to: 1.0.0

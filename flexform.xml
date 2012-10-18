@@ -1,0 +1,25 @@
+<T3DataStructure>
+  <sheets>
+    <sDEF>
+      <ROOT>
+        <TCEforms>
+          <sheetTitle>Optionen</sheetTitle>
+        </TCEforms>
+        <type>array</type>
+        <el>
+          <what_to_display>
+            <TCEforms>
+             <label>LLL:EXT:mfc_linkbox/pi1/locallang.xml:label.pi_flexform.textarea</label>
+				<config>
+				  <type>text</type>
+				  <cols>50</cols>
+				  <rows>3</rows>
+				</config>
+				<defaultExtras>richtext[*]:rte_transform[flag=rte_enabled|mode=ts_css]</defaultExtras>
+            </TCEforms>
+          </what_to_display>   
+        </el>
+      </ROOT>
+    </sDEF>
+  </sheets>
+</T3DataStructure>

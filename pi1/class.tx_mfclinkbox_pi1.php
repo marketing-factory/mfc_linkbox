@@ -262,7 +262,11 @@ class tx_mfclinkbox_pi1 extends tslib_pibase {
 	 * @return	void
 	 */
 	protected function addOptionalContent() {
-		$this->markerArray['OPTIONAL_CONTENT'] = $this->pi_RTEcssText(
+		$this->markerArray['OPTIONAL_CONTENT_ABOVE'] = $this->pi_RTEcssText(
+			$this->pi_getFFvalue($this->cObj->data['pi_flexform'], 'optional_content_above')
+		);
+
+		$this->markerArray['OPTIONAL_CONTENT_BELOW'] = $this->pi_RTEcssText(
 			$this->pi_getFFvalue($this->cObj->data['pi_flexform'], 'what_to_display')
 		);
 	}

@@ -10,21 +10,24 @@
 			<label index="label.nextPage">Weiter zum nächsten Thema:</label>
 			<label index="label.previousPage">Zurück zum Thema:</label>
 			<label index="label.abovePage">Zurück zum Oberthema:</label>
-			<label index="label.pi_flexform.textarea">Zusatzfeld</label>
+            <label index="label.pi_flexform.textareaAbove">Zusatzfeld oben</label>
+			<label index="label.pi_flexform.textareaBelow">Zusatzfeld unten</label>
 		</languageKey>
 		<languageKey index="de" type="array">
 			<label index="label.headline">Weiterführende Informationen</label>
 			<label index="label.nextPage">Weiter zum nächsten Thema:</label>
 			<label index="label.previousPage">Zurück zum Thema:</label>
 			<label index="label.abovePage">Zurück zum Oberthema:</label>
-			<label index="label.pi_flexform.textarea">Zusatzfeld</label>
+            <label index="label.pi_flexform.textareaAbove">Zusatzfeld oben</label>
+			<label index="label.pi_flexform.textareaBelow">Zusatzfeld unten</label>
 		</languageKey>
 		<languageKey index="en" type="array">
 			<label index="label.headline">More informationen</label>
 			<label index="label.nextPage">Next topic:</label>
 			<label index="label.previousPage">Previous topic:</label>
 			<label index="label.abovePage">Main topic:</label>
-			<label index="label.pi_flexform.textarea">Additional content</label>
+            <label index="label.pi_flexform.textareaAbove">Additional content on top</label>
+			<label index="label.pi_flexform.textareaBelow">Additional content below</label>
 		</languageKey>
 	</data>
 </T3locallang>

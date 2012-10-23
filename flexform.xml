@@ -7,6 +7,14 @@
         </TCEforms>
         <type>array</type>
         <el>
+        <headline>
+                <TCEforms>
+                 <label>LLL:EXT:mfc_linkbox/pi1/locallang.xml:label.pi_flexform.textboxHeadline</label>
+    				<config>
+    				  <type>input</type>
+    				</config>
+            </TCEforms>
+        </headline>
         <optional_content_above>
             <TCEforms>
              <label>LLL:EXT:mfc_linkbox/pi1/locallang.xml:label.pi_flexform.textareaAbove</label>

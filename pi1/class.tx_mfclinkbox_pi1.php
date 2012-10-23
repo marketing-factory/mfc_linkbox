@@ -171,7 +171,7 @@ class tx_mfclinkbox_pi1 extends tslib_pibase {
 	 */
 	protected function setDefaultMarkerArray() {
 		$this->markerArray = array(
-			'LABEL_HEADLINE' 		=> $this->pi_getLL('label.headline'),
+			'LABEL_HEADLINE' 		=> '',
 			'LABEL_ABOVE_PAGE' 		=> $this->pi_getLL('label.abovePage'),
 			'LABEL_PREVIOUS_PAGE' 	=> '',
 			'LABEL_NEXT_PAGE'		=> '',
@@ -188,10 +188,19 @@ class tx_mfclinkbox_pi1 extends tslib_pibase {
 	 * @return	void
 	 */
 	protected function setDynamicLinks() {
+		$this->setHeadline();
 		$this->setNextPageLink();
 		$this->setPreviousPageLink();
 		$this->setAbovePageLink();
 		$this->addOptionalContent();
+	}
+
+	protected function setHeadline() {
+		if ($this->pi_getFFvalue($this->cObj->data['pi_flexform'], 'headline') != '') {
+			$this->markerArray['LABEL_HEADLINE'] = $this->pi_getFFvalue($this->cObj->data['pi_flexform'], 'headline');
+		} else {
+			$this->markerArray['LABEL_HEADLINE'] = $this->conf['headline'];
+		}
 	}
 
 	/**

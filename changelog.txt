@@ -1,6 +1,14 @@
+12-10-25 Yves Becker  <yb@marketing-factory.de>
+
+	* New Feature: dynamic content above dynamic links
+	* New Feature: dynamic links can be styled with class="linkbox_link"
+	* New Feature: dynamic headline - default set via TypoScript and also alternative headline for each box possible
+	* Set Version to: 1.1.0
+
+
 12-10-17 Yves Becker <yb@marketing-factory.de>
 
-	* hide empty <p> blocks
+	* Bugfix: hide empty <p> blocks
 	* Set Version to: 1.0.1
 
 12-01-27 Yves Becker <yb@marketing-factory.de>

@@ -209,13 +209,15 @@ class tx_mfclinkbox_pi1 extends tslib_pibase {
 	 * @return	void
 	 */
 	protected function setNextPageLink() {
+		$wrap = '<span class="icon-circle-arrow-right" />';
 		$this->markerArray['DISPLAY_NEXT_PAGE'] = 'none';
 		if ($this->currentPageKey + 1 < count($this->uidList)) {
 			$nextPagePid = $this->currentPageKey + 1;
 			$this->markerArray['LABEL_NEXT_PAGE'] = $this->pi_getLL('label.nextPage');
 
 			$nextPageTitle = $this->getTitleByPid($this->uidList[$nextPagePid]);
-			$nextPageLink = $this->getLinkByPid($this->uidList[$nextPagePid], $nextPageTitle);
+			#$nextPageTitle = '<span class="icon-circle-arrow-right" />' . $nextPageTitle;
+			$nextPageLink = $this->getLinkByPid($this->uidList[$nextPagePid], $nextPageTitle, $wrap);
 			$this->markerArray['LINK_NEXT_PAGE'] = $nextPageLink;
 			$this->markerArray['DISPLAY_NEXT_PAGE'] = 'block';
 		}
@@ -227,13 +229,14 @@ class tx_mfclinkbox_pi1 extends tslib_pibase {
 	 * @return	void
 	 */
 	protected function setPreviousPageLink() {
+		$wrap = '<span class="icon-circle-arrow-left" />';
 		$this->markerArray['DISPLAY_PREVIOUS_PAGE'] = 'none';
 		if ($this->currentPageKey != 0) {
 			$previousPagePid = $this->currentPageKey - 1;
 			$this->markerArray['LABEL_PREVIOUS_PAGE'] = $this->pi_getLL('label.previousPage');
 
 			$previousPageTitle = $this->getTitleByPid($this->uidList[$previousPagePid]);
-			$previousPageLink = $this->getLinkByPid($this->uidList[$previousPagePid], $previousPageTitle);
+			$previousPageLink = $this->getLinkByPid($this->uidList[$previousPagePid], $previousPageTitle, $wrap);
 			$this->markerArray['LINK_PREVIOUS_PAGE'] = $previousPageLink;
 			$this->markerArray['DISPLAY_PREVIOUS_PAGE'] = 'block';
 		}
@@ -245,7 +248,7 @@ class tx_mfclinkbox_pi1 extends tslib_pibase {
 	 * @return	void
 	 */
 	protected function setAbovePageLink() {
-
+		$wrap = '<span class="icon-circle-arrow-up" />';
 		$this->markerArray['DISPLAY_ABOVE_PAGE'] = 'none';
 		$pageExists = $this->getLinkByPid($this->parentPid);
 		if (!$pageExists) {
@@ -253,14 +256,14 @@ class tx_mfclinkbox_pi1 extends tslib_pibase {
 				if ($page['hidden'] == '0' && $page['pid'] != $this->parentPid) {
 					$nextPid = $page['uid'];
 					$abovePageTitle = $this->getTitleByPid($nextPid);
-					$this->markerArray['LINK_ABOVE_PAGE'] = $this->getLinkByPid($nextPid, $abovePageTitle);
+					$this->markerArray['LINK_ABOVE_PAGE'] = $this->getLinkByPid($nextPid, $abovePageTitle, $wrap);
 					$this->markerArray['DISPLAY_ABOVE_PAGE'] = 'block';
 					break;
 				}
 			}
 		} else {
 			$abovePageTitle = $this->getTitleByPid($this->parentPid);
-			$this->markerArray['LINK_ABOVE_PAGE'] = $this->getLinkByPid($this->parentPid, $abovePageTitle);
+			$this->markerArray['LINK_ABOVE_PAGE'] = $this->getLinkByPid($this->parentPid, $abovePageTitle, $wrap);
 			$this->markerArray['DISPLAY_ABOVE_PAGE'] = 'block';
 		}
 	}
@@ -326,12 +329,13 @@ class tx_mfclinkbox_pi1 extends tslib_pibase {
 	 * @param 	string 	$title
 	 * @return	string	$link
 	 */
-	protected function getLinkByPid($pid, $title="") {
+	protected function getLinkByPid($pid, $title = '', $wrap = '') {
 		$linkConf = array(
 			'parameter' => $pid,
 			'useCacheHash' => '1',
 			'ATagBeforeWrap' => '1',
-			'title' =>  $title
+			'title' =>  $title,
+			'wrap' => $wrap
 		);
 		return $this->cObj->typoLink($title, $linkConf, 1);
 	}

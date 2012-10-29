@@ -1,3 +1,8 @@
+12-10-29 Yves Becker  <yb@marketing-factory.de>
+
+	* Added: LinkWrap to add Arrow Icons
+	* Set Version to: 1.1.1
+
 12-10-25 Yves Becker  <yb@marketing-factory.de>
 
 	* New Feature: dynamic content above dynamic links

@@ -209,7 +209,7 @@ class tx_mfclinkbox_pi1 extends tslib_pibase {
 	 * @return	void
 	 */
 	protected function setNextPageLink() {
-		$wrap = '<span class="icon-circle-arrow-right" />';
+		$wrap = '<span class="icon-circle-arrow-right"></span> |';
 		$this->markerArray['DISPLAY_NEXT_PAGE'] = 'none';
 		if ($this->currentPageKey + 1 < count($this->uidList)) {
 			$nextPagePid = $this->currentPageKey + 1;
@@ -229,7 +229,7 @@ class tx_mfclinkbox_pi1 extends tslib_pibase {
 	 * @return	void
 	 */
 	protected function setPreviousPageLink() {
-		$wrap = '<span class="icon-circle-arrow-left" />';
+		$wrap = '<span class="icon-circle-arrow-left"></span> |';
 		$this->markerArray['DISPLAY_PREVIOUS_PAGE'] = 'none';
 		if ($this->currentPageKey != 0) {
 			$previousPagePid = $this->currentPageKey - 1;
@@ -248,7 +248,7 @@ class tx_mfclinkbox_pi1 extends tslib_pibase {
 	 * @return	void
 	 */
 	protected function setAbovePageLink() {
-		$wrap = '<span class="icon-circle-arrow-up" />';
+		$wrap = '<span class="icon-circle-arrow-up"></span> |';
 		$this->markerArray['DISPLAY_ABOVE_PAGE'] = 'none';
 		$pageExists = $this->getLinkByPid($this->parentPid);
 		if (!$pageExists) {

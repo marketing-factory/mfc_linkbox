@@ -146,7 +146,6 @@ class tx_mfclinkbox_pi1 extends tslib_pibase {
 	/**
 	 * initializes configuration and flexform
 	 *
-	 * @param 	array 	$configuration
 	 * @return 	void
 	 */
 	protected function initializeFlexform() {
@@ -325,9 +324,10 @@ class tx_mfclinkbox_pi1 extends tslib_pibase {
 	/**
 	 * build link to a page by given pid and title
 	 *
-	 * @param 	int 	$pid
-	 * @param 	string 	$title
-	 * @return	string	$link
+	 * @param int $pid
+	 * @param string $title
+	 * @param string $wrap
+	 * @return string $link
 	 */
 	protected function getLinkByPid($pid, $title = '', $wrap = '') {
 		$linkConf = array(

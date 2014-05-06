@@ -22,7 +22,6 @@
 *  This copyright notice MUST APPEAR in all copies of the script!
 ***************************************************************/
 
-require_once(PATH_tslib . 'class.tslib_pibase.php');
 
 /**
  * Plugin 'Linkbox' for the 'mfc_linkbox' extension.

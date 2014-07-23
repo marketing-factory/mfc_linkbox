@@ -298,7 +298,7 @@ class tx_mfclinkbox_pi1 extends tslib_pibase {
 	 */
 	protected function getTreeLevelUids() {
 		$tree = t3lib_div::makeInstance('t3lib_queryGenerator');
-		$uidListString = $tree->getTreeList($this->parentPid, 1, 0, 'hidden = 0 AND nav_hide = 0');
+		$uidListString = $tree->getTreeList($this->parentPid, 1, 0, 'hidden = 0 AND doktype in (1,7) AND nav_hide = 0');
 		$uidListArray = t3lib_div::trimExplode(',', $uidListString);
 
 			// cut off parent pid

@@ -3,4 +3,7 @@ plugin.tx_mfclinkbox_pi1 {
 	userFunc = tx_mfclinkbox_pi1->main
 	templateFile = EXT:mfc_linkbox/resources/private/template/linkbox.html
 	headline = {$mfc_linkbox.headline}
+	wrapNextPage = <span class="fa fa-arrow-circle-right"></span> |
+	wrapPrevPage = <span class="fa fa-arrow-circle-left"></span> |
+	wrapParentPage = <span class="fa fa-arrow-circle-up"></span> |
 }

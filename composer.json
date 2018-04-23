@@ -1,0 +1,16 @@
+{
+  "name": "mfc/mfc-linkbox",
+  "type": "typo3-cms-extension",
+  "description": "Default Sitepackage for pdflib",
+  "license": ["GPL-2.0+"],
+  "version": "3.0.0",
+
+  "require": {
+    "typo3/cms-core": ">8.7.0, <9.0.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Mfc\\MfcLinkbox\\": "Classes/"
+    }
+  }
+}

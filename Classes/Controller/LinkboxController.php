@@ -341,6 +341,7 @@ class LinkboxController extends \TYPO3\CMS\Frontend\Plugin\AbstractPlugin
     {
         /** @var PageRepository $page */
         $page = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(PageRepository::class);
+        $page->sys_language_uid = $GLOBALS['TSFE']->sys_language_content;
         $pageContent = $page->getPage($pid); //get page record by pageId
         $title = $pageContent['title']; //get title
         return $title;

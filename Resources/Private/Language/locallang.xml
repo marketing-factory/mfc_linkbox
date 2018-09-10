@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>module</type>
+		<description>Language labels for plugin &quot;tx_mfclinkbox_pi1&quot;</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="label.nextPage">Weiter zum nächsten Thema:</label>
+			<label index="label.previousPage">Zurück zum Thema:</label>
+			<label index="label.abovePage">Zurück zum Oberthema:</label>
+            <label index="label.pi_flexform.textareaAbove">Zusatzfeld oben</label>
+			<label index="label.pi_flexform.textareaBelow">Zusatzfeld unten</label>
+            <label index="label.pi_flexform.textboxHeadline">Überschrift (leer lassen für Standard-Text)</label>
+		</languageKey>
+		<languageKey index="de" type="array">
+			<label index="label.nextPage">Weiter zum nächsten Thema:</label>
+			<label index="label.previousPage">Zurück zum Thema:</label>
+			<label index="label.abovePage">Zurück zum Oberthema:</label>
+            <label index="label.pi_flexform.textareaAbove">Zusatzfeld oben</label>
+			<label index="label.pi_flexform.textareaBelow">Zusatzfeld unten</label>
+            <label index="label.pi_flexform.textboxHeadline">Überschrift (leer lassen für Standard-Text)</label>
+		</languageKey>
+		<languageKey index="en" type="array">
+			<label index="label.nextPage">Next topic:</label>
+			<label index="label.previousPage">Previous topic:</label>
+			<label index="label.abovePage">Main topic:</label>
+            <label index="label.pi_flexform.textareaAbove">Additional content on top</label>
+			<label index="label.pi_flexform.textareaBelow">Additional content below</label>
+            <label index="label.pi_flexform.textboxHeadline">Headline (keep empty for default-text)</label>
+		</languageKey>
+	</data>
+</T3locallang>

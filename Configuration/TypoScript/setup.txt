@@ -1,7 +1,7 @@
 plugin.tx_mfclinkbox_pi1 = USER
 plugin.tx_mfclinkbox_pi1 {
-	userFunc = tx_mfclinkbox_pi1->main
-	templateFile = EXT:mfc_linkbox/resources/private/template/linkbox.html
+	userFunc = Mfc\MfcLinkbox\Controller\LinkboxController->main
+	templateFile = EXT:mfc_linkbox/Resources/Private/Templates/linkbox.html
 	headline = {$mfc_linkbox.headline}
 	wrapNextPage = <span class="fa fa-arrow-circle-right"></span> |
 	wrapPrevPage = <span class="fa fa-arrow-circle-left"></span> |
